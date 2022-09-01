@@ -75,9 +75,9 @@ func cardapio(){
 func opcoes(){
 
 	opcs := "----Escolha uma opção----\n"+
-				"[1] - Cardapio\n"+
-				"[2] - Dedo\n"+
-				"[3] - Sair\n"
+		"[1] - Cardapio\n"+
+		"[2] - Dedo\n"+
+		"[3] - Sair\n"
 
 	fmt.Println(opcs)
 
