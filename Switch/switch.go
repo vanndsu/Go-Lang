@@ -4,43 +4,37 @@ import "fmt"
 
 func main(){
 
-	var opc int
-	var i int
-	var c int
-	
+	opcoes()
 
-	fmt.Println("-------------Cardápio-------------")
-	println("1- Pizza R$ 20,00\n2- Refri lata R$ 5,00\n3- Sobremesa R$ 8,00")
+	var op int
+	fmt.Scan(&op)
+	switch op{
 
-	for i  = 0 ; i < 4 ; i++{
-
-	fmt.Scan(&opc)
-	switch opc{
-		
 		case 1:
-			println("Você escolheu pizza!")
-			c = 20
-			break
-
-		
+			fmt.Println("Pizza escolhida")
+	
 		case 2:
-			println("Você refri lata!")
-			c = 5
-			break
+			fmt.Println("Latinha escolhida")
+
 		case 3:
-			println("Você escolheu uma sobremesa!")
-			c = 8
-			break
+			fmt.Println("Sombresa escolhida")
 
-		default: 
-			println("Escolha uma opção válida: ")
-
+		case 0:
+			fmt.Println("Saindo...")
+		
+		default:
+			fmt.Println("Opção inválida")
 	}
-	println("Sua conta deu: ",c)
 	
 }
 
-	
+func opcoes(){
 
+	opc:="Escolha uma opção\n"+
+		 "[1] - Pizza\n"+
+		 "[2] - Latinha\n"+
+		 "[3] - Sobremesa\n"+
+		 "[0] - Sair\n"
 
+	fmt.Println(opc)
 }
